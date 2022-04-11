@@ -1,6 +1,8 @@
 ﻿using BaarakuMiniBankAPIs.Middleware.Core;
 using BaarakuMiniBankAPIs.Middleware.Core.Fakes;
 using BaarakuMiniBankAPIs.Middleware.Core.Implementations;
+using BaarakuMiniBankAPIs.Middleware.Core.Processors;
+using BaarakuMiniBankAPIs.Middleware.Core.Processors.Paystack;
 using BaarakuMiniBankAPIs.Middleware.Core.Repository;
 using BaarakuMiniBankAPIs.Middleware.Core.Services;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -30,16 +32,19 @@ namespace BaarakuMiniBankAPIs.Middleware.Client.Dependencies
             {
                 //FakeProcessors
                 services.AddScoped<IMessagePackProvider, FakeMessagePackProvider>();
+                services.AddScoped<IPayStackProcessor, FakePayStackProcessor>();
             }
             else
             {
                 //Processors
                 services.AddScoped<IMessagePackProvider, FakeMessagePackProvider>();
+                services.AddScoped<IPayStackProcessor, PayStackProcessor>();
             }
 
             //Filters
             services.Configure<SystemSettings>(opt => configuration.GetSection("SystemSettings").Bind(opt));
             services.Configure<MessagePackSettings>(opt => configuration.GetSection("MessagePackSettings").Bind(opt));
+            services.Configure<PaystackSettings>(opt => configuration.GetSection("PaystackSettings").Bind(opt));
 
 
             services.AddDbContext<ApplicationContext>(opts =>

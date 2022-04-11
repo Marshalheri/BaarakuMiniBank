@@ -1,6 +1,7 @@
 ﻿using BaarakuMiniBankAPIs.Middleware.Client.Filters;
 using BaarakuMiniBankAPIs.Middleware.Core;
 using BaarakuMiniBankAPIs.Middleware.Core.DTOs.Transactions;
+using BaarakuMiniBankAPIs.Middleware.Core.Processors.Paystack;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -19,6 +20,23 @@ namespace BaarakuMiniBankAPIs.Middleware.Client.Controllers
         {
             _service = service;
         }
+        /// <summary>
+        /// get list of banks
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("banks")]
+        [ProducesResponseType(typeof(IEnumerable<BanksData>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetBanks()
+        {
+            var result = await _service.GetBanksAsync();
+            if (!result.IsSuccessful)
+            {
+                return CreateResponse(result.Error, result.FaultType);
+            }
+            return Ok(result.GetPayload());
+        }
+
         /// <summary>
         /// verify customer account
         /// </summary>

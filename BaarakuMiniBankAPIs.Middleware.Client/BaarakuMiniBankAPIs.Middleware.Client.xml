@@ -11,6 +11,12 @@
             <param name="request"></param>
             <returns></returns>
         </member>
+        <member name="M:BaarakuMiniBankAPIs.Middleware.Client.Controllers.TransactionController.GetBanks">
+            <summary>
+            get list of banks
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:BaarakuMiniBankAPIs.Middleware.Client.Controllers.TransactionController.VerifyCustomerAccount(System.String,System.String)">
             <summary>
             verify customer account

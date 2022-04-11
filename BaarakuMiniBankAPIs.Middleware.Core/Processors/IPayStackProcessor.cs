@@ -4,12 +4,11 @@ using BaarakuMiniBankAPIs.Middleware.Core.Processors.Paystack;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BaarakuMiniBankAPIs.Middleware.Core
+namespace BaarakuMiniBankAPIs.Middleware.Core.Processors
 {
-    public interface ITransactionService
+    public interface IPayStackProcessor
     {
-        Task<BasicResponse> FundCustomerAccountAsync(FundAccountRequestDTO request);
-        Task<PayloadResponse<VerifyAccountNumberResponseDTO>> VerifyCustomerAccountAsync(string accountNumber, string bankCode);
+        Task<PayloadResponse<VerifyAccountNumberResponseDTO>> VerifyAccountNumberAsync(string accounNumber, string bankCode);
         Task<PayloadResponse<IEnumerable<BanksData>>> GetBanksAsync();
     }
 }
