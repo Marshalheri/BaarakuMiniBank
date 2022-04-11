@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BaarakuMiniBankAPIs.Middleware.Client</name>
+    </assembly>
+    <members>
+        <member name="M:BaarakuMiniBankAPIs.Middleware.Client.Controllers.CustomerController.OnboardCustomer(BaarakuMiniBankAPIs.Middleware.Core.DTOs.Customers.CreateCustomerRequestDTO)">
+            <summary>
+            onboard customer
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaarakuMiniBankAPIs.Middleware.Client.Controllers.TransactionController.VerifyCustomerAccount(System.String,System.String)">
+            <summary>
+            verify customer account
+            </summary>
+            <param name="accountNumber"></param>
+            <param name="bankCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaarakuMiniBankAPIs.Middleware.Client.Controllers.TransactionController.FundCustomerAccount(BaarakuMiniBankAPIs.Middleware.Core.DTOs.Transactions.FundAccountRequestDTO)">
+            <summary>
+            fund customer account
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

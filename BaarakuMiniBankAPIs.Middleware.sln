@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaarakuMiniBankAPIs.Middleware.Client", "BaarakuMiniBankAPIs.Middleware.Client\BaarakuMiniBankAPIs.Middleware.Client.csproj", "{3ED6733D-8DF1-40EE-814B-4B91BF8F00B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaarakuMiniBankAPIs.Middleware.Core", "BaarakuMiniBankAPIs.Middleware.Core\BaarakuMiniBankAPIs.Middleware.Core.csproj", "{FF98C6F7-62F3-45D9-B2AD-1145C058C632}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3ED6733D-8DF1-40EE-814B-4B91BF8F00B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ED6733D-8DF1-40EE-814B-4B91BF8F00B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ED6733D-8DF1-40EE-814B-4B91BF8F00B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ED6733D-8DF1-40EE-814B-4B91BF8F00B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF98C6F7-62F3-45D9-B2AD-1145C058C632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF98C6F7-62F3-45D9-B2AD-1145C058C632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF98C6F7-62F3-45D9-B2AD-1145C058C632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF98C6F7-62F3-45D9-B2AD-1145C058C632}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAB47577-AED7-436F-82E6-E367FAA08167}
+	EndGlobalSection
+EndGlobal
